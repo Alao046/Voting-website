@@ -1,0 +1,97 @@
+body{
+    background-color: black !important; 
+    text-align: center !important; 
+    /* background-image: url("h4.webp"); 
+   background-size: cover;
+   background-repeat: no-repeat;  */
+   
+   
+
+}
+
+.bigdiv{
+   
+   max-width: 400px;
+   min-height: 1px;
+   margin: 150px auto;
+   text-align: center;
+   /* padding-left: 30px; */
+   border: 2px solid wheat;
+   padding-right:10px;
+   padding-left:10px ;
+   padding-bottom: 50px;
+}
+.login{
+   padding-top: 30px;margin-bottom: 30px;
+   font-weight: bold;
+   font-size: 1.4em;
+   color: white;
+
+}
+.newp{
+   width: 100%;
+   height: 40px;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: 1px solid white;
+   outline: none;
+   background-color: inherit;
+   color: white;
+   padding-left: 10px;
+}
+.newp::placeholder{
+   color: white;
+}
+.newp:hover{
+   background-color: blue;
+}
+.loginb{
+   background-color:white !important;
+   border-radius: 0% !important;
+   width: 95%;
+   margin-bottom: 40px;
+   margin-top: 20px;
+   /* float: left; */
+   font-size: 1.1em !important;
+   font-weight: bold !important;
+   color: black !important;
+}
+.loginb:hover{
+   background-color: blue !important;
+}
+
+
+.register{
+   background-color: white !important;
+   border: none !important;
+   outline: none !important;
+   border-radius: 0% !important;
+   font-weight: bold !important;
+   color: wheat !important;
+   background-color: inherit !important;
+   
+}
+.register:hover{
+   background-color: blue !important;
+}
+
+.ss{
+  margin-right: 95px;
+  color: wheat;
+}
+
+.tregister{
+   background-color: blue !important;
+   border: 1px solid wheat;
+   /* border: none !important; */
+   /* outline: none !important; */
+   border-radius: 0% !important;
+   font-weight: bold !important;
+   color: wheat !important;
+   
+
+}
+.tregister:hover{
+   background-color: red !important;
+}

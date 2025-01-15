@@ -1,0 +1,189 @@
+body {
+  background-color: black !important;
+  /* text-align: center !important; */
+  /* background-image: url("h4.webp");
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+/* .bigdiv{
+    width: 1325px;
+    min-height: 0px;
+    background-color: red;
+} */
+.l1 {
+  margin-left: 100px !important;
+}
+.l1,
+.l2,
+.l3,
+.l4,
+.l5 {
+  margin-left: 40px;
+}
+.t1,
+.i1 {
+  background-color: white;
+}
+h1 {
+  margin-top: 150px;
+  font-weight: bold;
+  font-size: 4em;
+  color: white;
+  word-wrap: break-word;
+}
+.ATA {
+  margin-top: 60px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 70px;
+}
+
+.lout{
+    background-color: black !important;
+    color: white !important;
+    outline: none;
+    border: none;
+    margin-top: 7px;
+  }
+  
+  .lout:hover{
+    background-color: blue !important;
+  }
+
+/* .a4{
+  cursor: pointer !important;
+} */
+.a1,
+.a2,
+.a3,
+.a4,
+.a5 {
+  color: white !important;
+}
+
+.a1:hover {
+  background-color: blue;
+}
+.a2:hover {
+  background-color: blue;
+}
+.a3:hover {
+  background-color: blue;
+}
+.a4:hover {
+  background-color: blue;
+}
+.a5:hover {
+  background-color: blue;
+}
+
+.bigdiv {
+  max-width: 500px;
+  min-height: 1px;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid wheat;
+  /* background-color: red; */
+  margin-top: 80px;
+}
+
+.reg {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 1.9em;
+  color: white;
+}
+
+.se::placeholder {
+  color: red !important;
+}
+
+.formclass{
+    margin-left: 40px;
+}
+.newp {
+  width: 60%;
+  height: 40px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  /* outline: none; */
+  /* outline-color: blue; */
+  background-color: inherit;
+  color: wheat;
+  /* padding-left: 13px; */
+  margin-right: 10px;
+  
+  float: right;
+}
+
+.ggh {
+  color: white;
+  text-align: left;
+}
+
+.newp::placeholder {
+  color: white;
+}
+
+.newp:hover {
+  background-color: blue;
+}
+
+.dgender,
+.dstate {
+  /* width: 80%; */
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: white;
+  text-align: left;
+}
+
+.dgender{
+    margin-top: 20px;
+}
+
+.gender,
+.state {
+  background-color: black !important;
+  color: wheat !important;
+  border-radius: 0% !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid white !important;
+  outline: none !important;
+  width: 60% !important;
+  /* display: inline !important;  */
+  float: right;
+  margin-right: 10px;
+  padding-left: 0px !important;
+}
+
+.gender:hover {
+  background-color: blue !important;
+}
+.country:hover {
+  background-color: blue !important;
+}
+.state:hover {
+  background-color: blue !important;
+}
+
+.update {
+  background-color: white !important;
+  width: 180px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  font-size: 1.1em !important;
+  font-weight: bold !important;
+  color: black !important;
+  border-radius: 0% !important;
+}
+.update:hover {
+  background-color: blue !important;
+}

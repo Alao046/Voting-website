@@ -1,0 +1,93 @@
+body{
+    background-color: black !important;
+    text-align: center !important;
+    /* background-image: url("h4.webp");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    
+
+}
+
+.bigdiv{
+   max-width: 500px;
+   min-height: 1px;
+   margin: 20px auto;
+   text-align: center;
+   border: 2px solid wheat;
+   /* background-color: red; */
+
+}
+
+.reg{
+    padding-top: 30px;margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 1.9em;
+    color: white;
+}
+
+.newp{
+    width: 80%;
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    /* outline: none; */
+    /* outline-color: blue; */
+    background-color: inherit;
+    color: white;
+    padding-left: 10px;
+}
+
+.newp::placeholder{
+    color: white;
+}
+
+.newp:hover{
+    background-color: blue;
+    
+    
+}
+
+
+.dgender,.dcountry,.dstate{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+
+.gender,.country,.state{
+   background-color: black !important;
+   color: white !important;
+   border-radius: 0% !important;
+   border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid white !important;
+    outline: none !important;
+    
+}
+.gender:hover{
+    background-color: blue !important;
+}
+.country:hover{
+    background-color: blue !important;
+}
+.state:hover{
+    background-color: blue !important;
+}
+
+.submit{
+    background-color: white !important;
+    width: 150px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    font-size: 1.1em !important;
+    font-weight: bold !important;
+    color: black !important;
+    border-radius: 0% !important;
+}
+.submit:hover{
+    background-color: blue !important;
+}
