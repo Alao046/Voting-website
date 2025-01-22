@@ -32,6 +32,7 @@ $_SESSION['State'] = $rd['state'];
 $_SESSION['Candidate'] = $rd['candidate'];
 $_SESSION['Activation'] = $rd['activation'];
 
+
 if($password == $pwd) {
 echo "<script language='javascript'>window.open('lhome.php', '_parent')</script>";
 }

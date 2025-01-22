@@ -1,3 +1,22 @@
+<?php
+
+require_once('connection.php');
+
+$id = 1;
+$str4 = "select * from countertb where id='$id' ";
+$cmd4 = mysqli_query($mycon, $str4);
+$nr4 = mysqli_num_rows($cmd4);
+if($nr4 > 0) {
+$rd4 = mysqli_fetch_array($cmd4);
+$count1 = $rd4['tinubucount'];
+$count2 = $rd4['atikucount'];
+$count3 = $rd4['obicount'];
+
+}
+
+?>
+
+
 
 
 <!DOCTYPE html>
@@ -130,7 +149,7 @@
               <input class="vote" type="submit" name="vote1" value="VOTE" style="display: none;" />
               <p class="vc">
                 VOTE COUNT:
-                <span class="count">0</span>
+                <span class="count"><?php echo $count1; ?></span>
               </p>
             </div>
           </div>
@@ -148,7 +167,7 @@
               <input class="vote" type="submit" name="vote2" value="VOTE" style="display: none;" />
               <p class="vc">
                 VOTE COUNT:
-                <span class="count">0</span>
+                <span class="count"><?php echo $count2; ?></span>
               </p>
             </div>
           </div>
@@ -165,7 +184,7 @@
               <input class="vote" type="submit" name="vote2" value="VOTE" style="display: none;" />
               <p class="vc">
                 VOTE COUNT:
-                <span class="count">0</span>
+                <span class="count"><?php echo $count3; ?></span>
               </p>
             </div>
           </div>

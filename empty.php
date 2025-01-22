@@ -1,26 +1,7 @@
 <?php
 session_start();
 
-// require_once('connection.php');
 
-
-
-// $username = $_SESSION["userName"];
-// $activation = $_SESSION["Activation"];
-
-// if(isset($_POST["back"])){
-
-// header("Refresh:0: url=lhome.php");
-//     // $str = "select activation from userstb where username='$username' ";
-//     // $cmd = mysqli_query($mycon, $str);
-//     // $nr = mysqli_num_rows($cmd);
-//     // if($nr > 0) {
-//     //  $rd = mysqli_fetch_array($cmd);
-//     //  if ($activation=='ACTIVATED') {   
-//     //     echo "hello";  
-//     //  }
-//     // }
-// }
 ?>
 
 

@@ -4,13 +4,27 @@ include('logout.php');
 require_once('connection.php');
 
 
-
 $username = $_SESSION["userName"];
 $activation = $_SESSION["Activation"];
 
 
 
+$id = 1;
+$str4 = "select * from countertb where id='$id' ";
+$cmd4 = mysqli_query($mycon, $str4);
+$nr4 = mysqli_num_rows($cmd4);
+if($nr4 > 0) {
+$rd4 = mysqli_fetch_array($cmd4);
+$count1 = $rd4['tinubucount'];
+$count2 = $rd4['atikucount'];
+$count3 = $rd4['obicount'];
+
+}
+
+
+
 if(isset($_POST["vote1"])){
+  $voted1 = TRUE;
   $str = "select activation from userstb where username='$username' ";
   $cmd = mysqli_query($mycon, $str);
   $nr = mysqli_num_rows($cmd);
@@ -19,20 +33,40 @@ if(isset($_POST["vote1"])){
    if ($activation=='ACTIVATED') {
     $message = $username . ', you have already voted';
   require_once('message.php');
+  $voted1 = FALSE;
    }
    else  {
     $candidate = 'TINUBU';
     $activation1 = 'ACTIVATED';
-    $str = "update userstb set candidate= '$candidate', activation='$activation1'  where username = '$username' ";
-    $cmd = mysqli_query($mycon, $str) or die('Cannot Update Data!');
+    $str11 = "update userstb set candidate= '$candidate', activation='$activation1'  where username = '$username' ";
+    $cmd11 = mysqli_query($mycon, $str11) or die('Cannot Update Data!');
    echo "<script language='javascript'>window.open('empty.php', '_parent')</script>";
+   $voted1 = TRUE;
        
    }
 }
-  
+if($voted1 === TRUE){
+  $id = 1;
+$str111 = "select * from countertb where id='$id' ";
+$cmd111 = mysqli_query($mycon, $str111);
+$nr111 = mysqli_num_rows($cmd111);
+if($nr111 > 0) {
+$rd111 = mysqli_fetch_array($cmd111);
+$tinubucount = $rd111['tinubucount'];
+}
+
+$vote1 = $tinubucount + 1;
+
+$str1111 = "update countertb set tinubucount = '$vote1' where tinubucount = '$tinubucount' ";
+$cmd1111 = mysqli_query($mycon, $str1111) or die('Cannot Update Data!');
+}
+
   }
 
+
+
   if(isset($_POST["vote2"])){
+    $voted2 = TRUE;
     $str2 = "select activation from userstb where username='$username' ";
     $cmd2 = mysqli_query($mycon, $str2);
     $nr2= mysqli_num_rows($cmd2);
@@ -41,22 +75,39 @@ if(isset($_POST["vote1"])){
      if ($activation=='ACTIVATED') {
       $message = $username . ', you have already voted';
     require_once('message.php');
+    $voted2 = FALSE;
      }
      else  {
       $candidate = 'ATIKU';
       $activation = 'ACTIVATED';
-      $str2 = "update userstb set candidate= '$candidate', activation='$activation'  where username = '$username' ";
-      $cmd2 = mysqli_query($mycon, $str2) or die('Cannot Update Data!');
+      $str22 = "update userstb set candidate= '$candidate', activation='$activation'  where username = '$username' ";
+      $cmd22 = mysqli_query($mycon, $str22) or die('Cannot Update Data!');
       echo "<script language='javascript'>window.open('empty.php', '_parent')</script>";
+      $voted2 = TRUE;
          
      }
   }
-    
+  if($voted2 === TRUE){
+  $id = 1;
+  $str222 = "select * from countertb where id='$id' ";
+  $cmd222 = mysqli_query($mycon, $str222);
+  $nr222 = mysqli_num_rows($cmd222);
+  if($nr222 > 0) {
+  $rd222 = mysqli_fetch_array($cmd222);
+  $atikucount = $rd222['atikucount'];
+  }
+  
+  $vote2 = $atikucount + 1;
+  
+  $str2222 = "update countertb set atikucount = '$vote2' where atikucount = '$atikucount' ";
+  $cmd2222 = mysqli_query($mycon, $str2222) or die('Cannot Update Data!');
+}
     }  
 
 
 
     if(isset($_POST["vote3"])){
+      $voted3 = TRUE;
       $str3 = "select activation from userstb where username='$username' ";
       $cmd3 = mysqli_query($mycon, $str3);
       $nr3 = mysqli_num_rows($cmd3);
@@ -65,17 +116,33 @@ if(isset($_POST["vote1"])){
        if ($activation=='ACTIVATED') {
         $message = $username . ', you have already voted';
       require_once('message.php');
+      $voted3 = FALSE;
        }
        else  {
         $candidate = 'OBI';
         $activation = 'ACTIVATED';
-        $str3 = "update userstb set candidate= '$candidate', activation='$activation'  where username = '$username' ";
-        $cmd3 = mysqli_query($mycon, $str3) or die('Cannot Update Data!');
+        $str33 = "update userstb set candidate= '$candidate', activation='$activation'  where username = '$username' ";
+        $cmd33 = mysqli_query($mycon, $str33) or die('Cannot Update Data!');
         echo "<script language='javascript'>window.open('empty.php', '_parent')</script>";
+        $voted3 = TRUE;
            
        }
     }
-      
+    if($voted3 === TRUE){
+    $id = 1;
+$str333 = "select * from countertb where id='$id' ";
+$cmd333 = mysqli_query($mycon, $str333);
+$nr333 = mysqli_num_rows($cmd333);
+if($nr333 > 0) {
+$rd333 = mysqli_fetch_array($cmd333);
+$obicount = $rd333['obicount'];
+}
+
+$vote3 = $obicount + 1;
+
+$str3333 = "update countertb set obicount = '$vote3' where obicount = '$obicount' ";
+$cmd3333 = mysqli_query($mycon, $str3333) or die('Cannot Update Data!');
+    }
       }
 
 
@@ -221,8 +288,8 @@ if(isset($_POST["vote1"])){
               </form>
               <p class="vc">
                 VOTE COUNT:
-                              <!-- <span id="tcount" class="count" name="count1"><?php echo $count1; ?></span> -->
-                <span id="tcount" class="count" name="count1">0</span>
+                          
+                <span id="tcount" class="count" name="count1"><?php echo $count1; ?></span>
                 
                
               </p>
@@ -245,7 +312,7 @@ if(isset($_POST["vote1"])){
               
               <p class="vc">
                 VOTE COUNT:
-                <span id="acount" class="count" name="count2">0</span>
+                <span id="acount" class="count" name="count2"><?php echo $count2; ?></span>
               </p>
             </div>
           </div>
@@ -265,7 +332,7 @@ if(isset($_POST["vote1"])){
               
               <p class="vc">
                 VOTE COUNT:
-                <span id="pcount" class="count" name="count3">0</span>
+                <span id="pcount" class="count" name="count3"><?php echo $count3; ?></span>
               </p>
             </div>
           </div>
@@ -277,7 +344,7 @@ if(isset($_POST["vote1"])){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" 
     integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- <script src="home.js"></script> -->
+<!-- <script src="home.js"></script>  -->
     <!-- <script src="../bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script> -->
   </body>
 </html>
