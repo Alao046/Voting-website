@@ -26,11 +26,12 @@ PAGES AND FUNCTIONS
 10. Logout page: A non visible page, this page contain the log out session code.
 
 DATABASE
+
 A database was created using Xampp, our data base was named “voterdb”, under which we have two table data. 
 
-First table data: This table data holds all the users registration information as well as the candidate they voted for and their activation.
+1. First table data: This table data holds all the users registration information as well as the candidate they voted for and their activation.
 i.e: username, firstname, middlename, lastname, email, password, phone, gender, state, candidate, activation.
-Second table data: This table data is used to keep count of the amount of votes each of the presidential candidate has gotten.
+2. Second table data: This table data is used to keep count of the amount of votes each of the presidential candidate has gotten.
 i.e: tinubucount, atikucount, obi count.
 
 Note: THE javascript code “home.js” was no used in the code.
