@@ -4,9 +4,9 @@ This website is a basic voters website built with Html, Css, Bootstrap, PHP and 
 The website allows a user to vote for his preferred candidate in the Nigeria presidential elections.
 
 MODE OF OPERATION
-A user is to log in, in order to have access to vote, but as a first time user, you will have to Sign up.
-The sign up process entails that you add your personal informations, after which you can now sign in with the use of your Username and Password.
-Once signed in, you will have to scroll to to the bottom of the page and vote for any of your preferred candidate out of the 3 candidates listed. After which the total amount of vote a Candidate has will automatically update after you have voted. 
+1. A user is to log in, in order to have access to vote, but as a first time user, you will have to Sign up.
+2. The sign up process entails that you add your personal informations, after which you can now sign in with the use of your Username and Password.
+3. Once signed in, you will have to scroll to to the bottom of the page and vote for any of your preferred candidate out of the 3 candidates listed. After which the total amount of vote a Candidate has will automatically update after you have voted. 
 
 RULES AND GUIDLINES 
 1. When registering, a user has to pick a unique username, which can not be the same as the username of anyone who has previously registered. Therefore, your username can only be yours and it can never be changed.
